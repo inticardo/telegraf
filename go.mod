@@ -25,6 +25,7 @@ require (
 	github.com/Mellanox/rdmamap v1.1.0
 	github.com/Shopify/sarama v1.38.1
 	github.com/aerospike/aerospike-client-go/v5 v5.11.0
+	github.com/albenik/go-serial v1.2.0
 	github.com/alecthomas/units v0.0.0-20211218093645-b94a6e3cc137
 	github.com/aliyun/alibaba-cloud-sdk-go v1.62.470
 	github.com/amir/raidman v0.0.0-20170415203553-1ccc43bfb9c9
@@ -212,6 +213,8 @@ require (
 	layeh.com/radius v0.0.0-20221205141417-e7fbddd11d68
 	modernc.org/sqlite v1.24.0
 )
+
+require github.com/creack/goselect v0.1.0 // indirect
 
 require (
 	cloud.google.com/go v0.110.4 // indirect
