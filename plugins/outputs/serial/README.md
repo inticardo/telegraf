@@ -18,4 +18,27 @@ See the [CONFIGURATION.md][CONFIGURATION.md] for more details.
 [[outputs.serial]]
   port = "/dev/ttyUSB0"
 
+  ## Baud rate
+  # brate = 9600
+
+  ## Data bits
+  # bits = 8
+
+  ## Use HUPCL
+  # hupcl = false
+
+  ## Parity ("none"/"odd"/"even"/"mark"/"space")
+  # parity = "none"
+
+  ## Stop bit ("one"/"onepointfive"/"two")
+  # stop = "one"
+
+  ## Read timeout
+  # timeout = "1s"
+
+  ## Data format to output.
+  ## Each data format has its own unique set of configuration options, read
+  ## more about them here:
+  ## https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_OUTPUT.md
+  # data_format = "influx"
 ```
