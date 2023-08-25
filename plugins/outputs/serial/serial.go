@@ -11,7 +11,6 @@ import (
 	"github.com/albenik/go-serial/v2"
 	"github.com/influxdata/telegraf"
 	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/internal"
 	"github.com/influxdata/telegraf/plugins/outputs"
 	"github.com/influxdata/telegraf/plugins/serializers"
 )
@@ -32,7 +31,6 @@ type Serial struct {
 	Log     telegraf.Logger `toml:"-"`
 
 	serialOutput *SerialOutput
-	encoder      internal.ContentEncoder
 	serializer   serializers.Serializer
 }
 
@@ -69,10 +67,6 @@ func (s *Serial) Write(metrics []telegraf.Metric) error {
 	octets, err := s.serializer.SerializeBatch(metrics)
 	if err != nil {
 		return fmt.Errorf("could not serialize metric: %v", err)
-	}
-	octets, err = s.encoder.Encode(octets)
-	if err != nil {
-		return fmt.Errorf("could not compress metric: %v", err)
 	}
 	err = s.serialOutput.write(octets)
 	if err != nil {
