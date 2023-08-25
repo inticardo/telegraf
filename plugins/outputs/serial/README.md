@@ -33,7 +33,7 @@ See the [CONFIGURATION.md][CONFIGURATION.md] for more details.
   ## Stop bit ("one"/"onepointfive"/"two")
   # stop = "one"
 
-  ## Read timeout
+  ## Write timeout
   # timeout = "1s"
 
   ## Data format to output.
